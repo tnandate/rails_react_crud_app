@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 const Event = ({ event }) => (
   <div>
     <h2>
-        {event.event_date}
-        {' - '}
-        {event.event_type}
+      {event.event_date}
+      {' - '}
+      {event.event_type}
     </h2>
     <ul>
       <li>
