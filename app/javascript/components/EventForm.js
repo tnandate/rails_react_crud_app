@@ -21,6 +21,7 @@ class EventForm extends React.Component {
   componentDidMount() {
     new Pikaday({
       field: this.dateInput.current,
+      toString: date => formatDate(date),
       onSelect: (date) => {
         const formattedDate = formatDate(date);
         this.dateInput.current.value = formattedDate;
