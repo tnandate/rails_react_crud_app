@@ -30,6 +30,10 @@ class EventForm extends React.Component {
     });
   }
 
+  componentWillReceiveProps({ event }) {
+    this.setState({ event });
+  }
+
   updateEvent(key, value) {
     this.setState(prevState => ({
       event: {
