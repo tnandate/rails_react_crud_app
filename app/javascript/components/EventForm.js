@@ -79,6 +79,8 @@ class EventForm extends React.Component {
   }
 
   render() {
+    const { event } = this.state;
+
     return (
       <div>
         <h2>New Event</h2>
@@ -87,37 +89,37 @@ class EventForm extends React.Component {
           <div>
             <label htmlFor="event_type">
               <strong>Type:</strong>
-              <input type="text" id="event_type" name="event_type" onChange={this.handleInputChange}/>
+              <input type="text" id="event_type" name="event_type" onChange={this.handleInputChange} value={event.event_type}/>
             </label>
           </div>
           <div>
             <label htmlFor="event_date">
               <strong>Date:</strong>
-              <input type="text" id="event_date" name="event_date" ref={this.dateInput} autoComplete="off"/>
+              <input type="text" id="event_date" name="event_date" ref={this.dateInput} autoComplete="off" value={event.event_date} onChange={this.handleInputChange}/>
             </label>
           </div>
           <div>
             <label htmlFor="title">
               <strong>Title:</strong>
-              <textarea cols="30" rows="10" id="title" name="title" onChange={this.handleInputChange}/>
+              <textarea cols="30" rows="10" id="title" name="title" onChange={this.handleInputChange} value={event.title}/>
             </label>
           </div>
           <div>
             <label htmlFor="speaker">
               <strong>Speaker:</strong>
-              <input type="text" id="speaker" name="speaker" onChange={this.handleInputChange}/>
+              <input type="text" id="speaker" name="speaker" onChange={this.handleInputChange} value={event.speaker}/>
             </label>
           </div>
           <div>
             <label htmlFor="host">
               <strong>Hosts:</strong>
-              <input type="text" id="host" name="host" onChange={this.handleInputChange}/>
+              <input type="text" id="host" name="host" onChange={this.handleInputChange} value={event.host}/>
             </label>
           </div>
           <div>
             <label htmlFor="published">
               <strong>Publish:</strong>
-              <input type="checkbox" id="published" name="published" onChange={this.handleInputChange}/>
+              <input type="checkbox" id="published" name="published" onChange={this.handleInputChange} checked={event.published}/>
             </label>
           </div>
           <div className="form-actions">
